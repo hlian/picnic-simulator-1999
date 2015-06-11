@@ -9,7 +9,19 @@
 #ifndef Picnic_Simulator_1999_Prelude_pch
 #define Picnic_Simulator_1999_Prelude_pch
 
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+@import CoreData;
+@import UIKit;
+
+#import "ReactiveCocoa.h"
+#import "AFNetworking.h"
+#import "MagicalRecord.h"
+#import "PureLayout.h"
+#import "NSString+Ruby.h"
+#import "NSURL+QueryDictionary.h"
+#import "UIColor+Expanded.h"
+#import "UIView+Positioning.h"
+#import "CLKSingletons.h"
+
+#define CGRectNonsense ((CGRectMake(100, 100, 100, 100)))
 
 #endif

@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271FE8BC8C4A89518A1BF9CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996907E3CCA5519D6C43EF00 /* libPods.a */; };
 		3F9C25431B292E290025F0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25421B292E290025F0D4 /* AppDelegate.swift */; };
 		3F9C25461B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25441B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld */; };
-		3F9C25481B292E290025F0D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25471B292E290025F0D4 /* ViewController.swift */; };
-		3F9C254B1B292E290025F0D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C25491B292E290025F0D4 /* Main.storyboard */; };
+		3F9C25481B292E290025F0D4 /* MainUnicorn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25471B292E290025F0D4 /* MainUnicorn.swift */; };
 		3F9C254D1B292E290025F0D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254C1B292E290025F0D4 /* Images.xcassets */; };
 		3F9C25501B292E290025F0D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254E1B292E290025F0D4 /* LaunchScreen.xib */; };
 		3F9C255C1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */; };
@@ -27,17 +27,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F9BF65FCC492497D05B94AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3F06F9ED1B293153000FA049 /* Prelude.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prelude.pch; sourceTree = "<group>"; };
 		3F9C253D1B292E290025F0D4 /* Picnic Simulator 1999.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picnic Simulator 1999.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9C25411B292E290025F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9C25421B292E290025F0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9C25451B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Picnic_Simulator_1999.xcdatamodel; sourceTree = "<group>"; };
-		3F9C25471B292E290025F0D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3F9C254A1B292E290025F0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F9C25471B292E290025F0D4 /* MainUnicorn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUnicorn.swift; sourceTree = "<group>"; };
 		3F9C254C1B292E290025F0D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F9C254F1B292E290025F0D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3F9C25551B292E290025F0D4 /* Picnic Simulator 1999Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Picnic Simulator 1999Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9C255A1B292E290025F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picnic_Simulator_1999Tests.swift; sourceTree = "<group>"; };
+		996907E3CCA5519D6C43EF00 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B41563BCC9389C80122F855D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				271FE8BC8C4A89518A1BF9CB /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +68,8 @@
 				3F9C253F1B292E290025F0D4 /* Picnic Simulator 1999 */,
 				3F9C25581B292E290025F0D4 /* Picnic Simulator 1999Tests */,
 				3F9C253E1B292E290025F0D4 /* Products */,
+				A06D7D3C2E1A076E6B7E6F2E /* Pods */,
+				5D3E4718B00762E13A18FC09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,12 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				3F9C25421B292E290025F0D4 /* AppDelegate.swift */,
-				3F9C25471B292E290025F0D4 /* ViewController.swift */,
-				3F9C25491B292E290025F0D4 /* Main.storyboard */,
+				3F9C25471B292E290025F0D4 /* MainUnicorn.swift */,
 				3F9C254C1B292E290025F0D4 /* Images.xcassets */,
 				3F9C254E1B292E290025F0D4 /* LaunchScreen.xib */,
 				3F9C25441B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld */,
 				3F9C25401B292E290025F0D4 /* Supporting Files */,
+				3F06F9ED1B293153000FA049 /* Prelude.pch */,
 			);
 			path = "Picnic Simulator 1999";
 			sourceTree = "<group>";
@@ -115,6 +121,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5D3E4718B00762E13A18FC09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				996907E3CCA5519D6C43EF00 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A06D7D3C2E1A076E6B7E6F2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F9BF65FCC492497D05B94AE /* Pods.debug.xcconfig */,
+				B41563BCC9389C80122F855D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F9C255F1B292E290025F0D4 /* Build configuration list for PBXNativeTarget "Picnic Simulator 1999" */;
 			buildPhases = (
+				53C76B86EF7B5157B89C9232 /* Check Pods Manifest.lock */,
 				3F9C25391B292E290025F0D4 /* Sources */,
 				3F9C253A1B292E290025F0D4 /* Frameworks */,
 				3F9C253B1B292E290025F0D4 /* Resources */,
+				DFA738BDE14E1BB6B3D6D4C6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,7 +219,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9C254B1B292E290025F0D4 /* Main.storyboard in Resources */,
 				3F9C25501B292E290025F0D4 /* LaunchScreen.xib in Resources */,
 				3F9C254D1B292E290025F0D4 /* Images.xcassets in Resources */,
 			);
@@ -209,12 +233,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		53C76B86EF7B5157B89C9232 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA738BDE14E1BB6B3D6D4C6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F9C25391B292E290025F0D4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F9C25481B292E290025F0D4 /* ViewController.swift in Sources */,
+				3F9C25481B292E290025F0D4 /* MainUnicorn.swift in Sources */,
 				3F9C25461B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld in Sources */,
 				3F9C25431B292E290025F0D4 /* AppDelegate.swift in Sources */,
 			);
@@ -239,14 +296,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3F9C25491B292E290025F0D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3F9C254A1B292E290025F0D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3F9C254E1B292E290025F0D4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -343,21 +392,29 @@
 		};
 		3F9C25601B292E290025F0D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F9BF65FCC492497D05B94AE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prelude.pch;
 				INFOPLIST_FILE = "Picnic Simulator 1999/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Picnic Simulator 1999/Prelude.pch";
 			};
 			name = Debug;
 		};
 		3F9C25611B292E290025F0D4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B41563BCC9389C80122F855D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Prelude.pch;
 				INFOPLIST_FILE = "Picnic Simulator 1999/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Picnic Simulator 1999/Prelude.pch";
 			};
 			name = Release;
 		};
@@ -414,6 +471,7 @@
 				3F9C25611B292E290025F0D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F9C25621B292E290025F0D4 /* Build configuration list for PBXNativeTarget "Picnic Simulator 1999Tests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +480,7 @@
 				3F9C25641B292E290025F0D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
