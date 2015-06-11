@@ -1,0 +1,15 @@
+//
+//  Prelude.pch
+//  Picnic Simulator 1999
+//
+//  Created by Hao Lian on 6/10/15.
+//
+//
+
+#ifndef Picnic_Simulator_1999_Prelude_pch
+#define Picnic_Simulator_1999_Prelude_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
