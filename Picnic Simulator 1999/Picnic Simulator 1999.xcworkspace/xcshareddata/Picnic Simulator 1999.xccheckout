@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29DEA347-133B-4435-B063-A3C30D835F62</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Picnic Simulator 1999</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>743A71592E6082D862FE9F3AB2513884250BC09D</key>
+		<string>github.com:hlian/picnic-simulator-1999.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Picnic Simulator 1999/Picnic Simulator 1999.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>743A71592E6082D862FE9F3AB2513884250BC09D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:hlian/picnic-simulator-1999.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>743A71592E6082D862FE9F3AB2513884250BC09D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>743A71592E6082D862FE9F3AB2513884250BC09D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>picnic</string>
+		</dict>
+	</array>
+</dict>
+</plist>

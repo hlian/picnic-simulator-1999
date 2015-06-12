@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		271FE8BC8C4A89518A1BF9CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996907E3CCA5519D6C43EF00 /* libPods.a */; };
+		3F1613841B2A6B71007741B9 /* typewriter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F1613831B2A6B71007741B9 /* typewriter.mp3 */; };
 		3F9C25431B292E290025F0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25421B292E290025F0D4 /* AppDelegate.swift */; };
 		3F9C25461B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25441B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld */; };
 		3F9C25481B292E290025F0D4 /* MainUnicorn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25471B292E290025F0D4 /* MainUnicorn.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		0F9BF65FCC492497D05B94AE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		3F06F9ED1B293153000FA049 /* Prelude.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prelude.pch; sourceTree = "<group>"; };
+		3F1613831B2A6B71007741B9 /* typewriter.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = typewriter.mp3; path = ../media/typewriter.mp3; sourceTree = "<group>"; };
 		3F9C253D1B292E290025F0D4 /* Picnic Simulator 1999.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picnic Simulator 1999.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9C25411B292E290025F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9C25421B292E290025F0D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,9 +64,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1613811B2A6B53007741B9 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3F1613821B2A6B5D007741B9 /* media */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		3F1613821B2A6B5D007741B9 /* media */ = {
+			isa = PBXGroup;
+			children = (
+				3F1613831B2A6B71007741B9 /* typewriter.mp3 */,
+			);
+			name = media;
+			sourceTree = "<group>";
+		};
 		3F9C25341B292E290025F0D4 = {
 			isa = PBXGroup;
 			children = (
+				3F1613811B2A6B53007741B9 /* Other */,
 				3F9C253F1B292E290025F0D4 /* Picnic Simulator 1999 */,
 				3F9C25581B292E290025F0D4 /* Picnic Simulator 1999Tests */,
 				3F9C253E1B292E290025F0D4 /* Products */,
@@ -221,6 +240,7 @@
 			files = (
 				3F9C25501B292E290025F0D4 /* LaunchScreen.xib in Resources */,
 				3F9C254D1B292E290025F0D4 /* Images.xcassets in Resources */,
+				3F1613841B2A6B71007741B9 /* typewriter.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

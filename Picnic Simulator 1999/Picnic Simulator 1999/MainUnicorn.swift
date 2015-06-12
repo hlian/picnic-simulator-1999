@@ -6,12 +6,41 @@
 //
 //
 
+import AVFoundation
 import UIKit
 
 class Unicorn: UIViewController {
 }
 
 class Centaur: NSObject {
+}
+
+class Eden: NSObject {
+
+}
+
+func delay(delay:Double, closure:()->()) {
+    dispatch_after(
+        dispatch_time(
+            DISPATCH_TIME_NOW,
+            Int64(delay * Double(NSEC_PER_SEC))
+        ),
+        dispatch_get_main_queue(), closure)
+}
+
+extension AVAudioPlayer {
+    func fade(delta: Float) {
+        self.volume += delta
+        if (self.volume >= 0 && self.volume <= 1) {
+            let t = dispatch_time_t(1 * NSEC_PER_SEC)
+            delay(0.1) {
+                self.fade(delta)
+            }
+        } else {
+            self.volume = min(1, max(0, self.volume))
+            self.stop()
+        }
+    }
 }
 
 class Scene: Centaur {
@@ -55,10 +84,18 @@ class MainCentaur: Centaur {
     }
 }
 
+class MainEden: Eden {
+    class var typewriterAudio: AVAudioPlayer {
+        let path = NSBundle.mainBundle().pathForResource("typewriter", ofType: "mp3")!
+        return AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), error: nil)
+    }
+}
+
 class MainUnicorn: Unicorn {
     let textView = UITextView()
     let centaur = MainCentaur()
     let buttons = UIView()
+    var player: AVAudioPlayer!
 
     override func loadView() {
         self.view = UIView(frame: CGRectMake(0, 0, 100, 100))
@@ -77,6 +114,8 @@ class MainUnicorn: Unicorn {
         buttons.frame = CGRectMake(0, 100, 100, 100);
         buttons.hidden = true
         view.addSubview(buttons)
+
+        player = MainEden.typewriterAudio
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -91,6 +130,7 @@ class MainUnicorn: Unicorn {
     }
 
     func provoke(scene: Scene) -> RACSignal {
+        self.player.play()
         return scene.textHeartbeat.doNext ({
             [unowned self] (x) -> Void in
             let s = x as! String
@@ -104,6 +144,7 @@ class MainUnicorn: Unicorn {
                 self.buttons.addSubview(self.button(i, t: choice))
             }
             self.buttons.hidden = false
+            self.player.fade(-0.12)
         }).replayLast()
     }
 
