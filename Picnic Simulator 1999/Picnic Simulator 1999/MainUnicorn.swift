@@ -59,10 +59,10 @@ class Scene: Centaur {
         var i = 1
         return RACSignal.interval(0.05, onScheduler: RACScheduler.mainThreadScheduler()).takeUntilBlock({
             [unowned self] (x) -> Bool in
-            i > count(self.text)
+            i > self.text.characters.count
             }).map({
                 [unowned self] (x) -> AnyObject! in
-                let s = self.text.substringToIndex(advance(self.text.startIndex, i))
+                let s = self.text.substringToIndex(self.text.startIndex.advancedBy(i))
                 i += 1
                 return s
             }).replayLast()
@@ -75,7 +75,7 @@ class MainCentaur: Centaur {
     let scenesI = 0
 
     override init() {
-        self.scenes = map(texts) { Scene(text: $0) }
+        self.scenes = texts.map { Scene(text: $0) }
         super.init()
     }
 
@@ -87,7 +87,7 @@ class MainCentaur: Centaur {
 class MainEden: Eden {
     class var typewriterAudio: AVAudioPlayer {
         let path = NSBundle.mainBundle().pathForResource("typewriter", ofType: "mp3")!
-        return AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path), error: nil)
+        return try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
     }
 }
 
@@ -99,10 +99,10 @@ class MainUnicorn: Unicorn {
 
     override func loadView() {
         self.view = UIView(frame: CGRectMake(0, 0, 100, 100))
-        view.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight;
+        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight];
         view.backgroundColor = UIColor.whiteColor()
 
-        textView.autoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin
+        textView.autoresizingMask = [UIViewAutoresizing.FlexibleRightMargin, UIViewAutoresizing.FlexibleBottomMargin]
         textView.frame = CGRectMake(10, 40, 350, 1000);
         textView.textContainer.lineFragmentPadding = 0
         textView.userInteractionEnabled = false
@@ -110,7 +110,7 @@ class MainUnicorn: Unicorn {
 
         view.addSubview(textView)
 
-        buttons.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleBottomMargin;
+        buttons.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleBottomMargin];
         buttons.frame = CGRectMake(0, 100, 100, 100);
         buttons.hidden = true
         view.addSubview(buttons)
@@ -140,7 +140,7 @@ class MainUnicorn: Unicorn {
             for v in self.buttons.subviews {
                 v.removeFromSuperview()
             }
-            for (i, choice) in enumerate(scene.choices) {
+            for (i, choice) in scene.choices.enumerate() {
                 self.buttons.addSubview(self.button(i, t: choice))
             }
             self.buttons.hidden = false
@@ -149,7 +149,7 @@ class MainUnicorn: Unicorn {
     }
 
     func button(i: Int, t: String) -> UIButton {
-        let b = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        let b = UIButton(type: UIButtonType.System)
         b.layer.borderColor = UIColor.blackColor().CGColor
         b.layer.borderWidth = 1
         b.layer.cornerRadius = 5

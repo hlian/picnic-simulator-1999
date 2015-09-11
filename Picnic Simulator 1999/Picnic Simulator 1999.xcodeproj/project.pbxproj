@@ -203,6 +203,8 @@
 		3F9C25351B292E290025F0D4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				TargetAttributes = {
 					3F9C253C1B292E290025F0D4 = {
