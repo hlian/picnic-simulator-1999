@@ -1,0 +1,6 @@
+framework module CLKSingletons {
+  umbrella header "CLKSingletons-umbrella.h"
+
+  export *
+  module * { export * }
+}

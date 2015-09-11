@@ -11,16 +11,15 @@
 
 @import CoreData;
 @import UIKit;
-
-#import "ReactiveCocoa.h"
-#import "AFNetworking.h"
-#import "MagicalRecord.h"
-#import "PureLayout.h"
-#import "NSString+Ruby.h"
-#import "NSURL+QueryDictionary.h"
-#import "UIColor+Expanded.h"
-#import "UIView+Positioning.h"
-#import "CLKSingletons.h"
+@import ReactiveCocoa;
+@import AFNetworking;
+@import MagicalRecord;
+@import PureLayout;
+@import CLKSingletons;
+@import NSURL_QueryDictionary;
+@import NSString_Ruby;
+@import UIColor_Utilities;
+@import UIView_Positioning;
 
 #define CGRectNonsense ((CGRectMake(100, 100, 100, 100)))
 

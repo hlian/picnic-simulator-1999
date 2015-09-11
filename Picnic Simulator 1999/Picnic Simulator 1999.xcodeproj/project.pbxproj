@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		271FE8BC8C4A89518A1BF9CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 996907E3CCA5519D6C43EF00 /* libPods.a */; };
 		3F1613841B2A6B71007741B9 /* typewriter.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3F1613831B2A6B71007741B9 /* typewriter.mp3 */; };
 		3F9C25431B292E290025F0D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25421B292E290025F0D4 /* AppDelegate.swift */; };
 		3F9C25461B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C25441B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld */; };
@@ -15,6 +14,7 @@
 		3F9C254D1B292E290025F0D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254C1B292E290025F0D4 /* Images.xcassets */; };
 		3F9C25501B292E290025F0D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254E1B292E290025F0D4 /* LaunchScreen.xib */; };
 		3F9C255C1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */; };
+		CF9D9111B19E806C3AEF0703 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB84B758A6931D835B5A4BD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,7 @@
 		3F9C25551B292E290025F0D4 /* Picnic Simulator 1999Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Picnic Simulator 1999Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9C255A1B292E290025F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picnic_Simulator_1999Tests.swift; sourceTree = "<group>"; };
-		996907E3CCA5519D6C43EF00 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB84B758A6931D835B5A4BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41563BCC9389C80122F855D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				271FE8BC8C4A89518A1BF9CB /* libPods.a in Frameworks */,
+				CF9D9111B19E806C3AEF0703 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +143,7 @@
 		5D3E4718B00762E13A18FC09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				996907E3CCA5519D6C43EF00 /* libPods.a */,
+				5AB84B758A6931D835B5A4BD /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +169,7 @@
 				3F9C253A1B292E290025F0D4 /* Frameworks */,
 				3F9C253B1B292E290025F0D4 /* Resources */,
 				DFA738BDE14E1BB6B3D6D4C6 /* Copy Pods Resources */,
+				FF1ECD4D3D8FB1EECB90736C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,7 +206,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					3F9C253C1B292E290025F0D4 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -286,6 +287,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF1ECD4D3D8FB1EECB90736C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -350,6 +366,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -365,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -404,7 +421,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -421,6 +438,7 @@
 				GCC_PREFIX_HEADER = Prelude.pch;
 				INFOPLIST_FILE = "Picnic Simulator 1999/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kernelfuffle.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Picnic Simulator 1999/Prelude.pch";
 			};
@@ -435,6 +453,7 @@
 				GCC_PREFIX_HEADER = Prelude.pch;
 				INFOPLIST_FILE = "Picnic Simulator 1999/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kernelfuffle.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Picnic Simulator 1999/Prelude.pch";
 			};
@@ -454,6 +473,7 @@
 				);
 				INFOPLIST_FILE = "Picnic Simulator 1999Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kernelfuffle.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Picnic Simulator 1999.app/Picnic Simulator 1999";
 			};
@@ -469,6 +489,7 @@
 				);
 				INFOPLIST_FILE = "Picnic Simulator 1999Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.kernelfuffle.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Picnic Simulator 1999.app/Picnic Simulator 1999";
 			};

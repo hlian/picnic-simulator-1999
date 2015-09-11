@@ -19,6 +19,13 @@ class Eden: NSObject {
 
 }
 
+private var typewriterAudio: AVAudioPlayer = {
+    let path = NSBundle.mainBundle().pathForResource("typewriter", ofType: "mp3")!
+    let player = try! AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
+    player.prepareToPlay()
+    return player
+}()
+
 func delay(delay:Double, closure:()->()) {
     dispatch_after(
         dispatch_time(
@@ -32,7 +39,6 @@ extension AVAudioPlayer {
     func fade(delta: Float) {
         self.volume += delta
         if (self.volume >= 0 && self.volume <= 1) {
-            let t = dispatch_time_t(1 * NSEC_PER_SEC)
             delay(0.1) {
                 self.fade(delta)
             }
@@ -44,28 +50,15 @@ extension AVAudioPlayer {
 }
 
 class Scene: Centaur {
-    let text: String
-    let choices: [String]
+    let text: String = ""
+    let choices: [String] = [""]
 
     init(text: String) {
-        let parts = text.componentsSeparatedByString(" - ")
-        self.text = parts[0]
-        let rest = parts[1]
-
-        choices = parts[1].componentsSeparatedByString("/")
+        let parts = text.sp
     }
 
     var textHeartbeat: RACSignal {
-        var i = 1
-        return RACSignal.interval(0.05, onScheduler: RACScheduler.mainThreadScheduler()).takeUntilBlock({
-            [unowned self] (x) -> Bool in
-            i > self.text.characters.count
-            }).map({
-                [unowned self] (x) -> AnyObject! in
-                let s = self.text.substringToIndex(self.text.startIndex.advancedBy(i))
-                i += 1
-                return s
-            }).replayLast()
+        return RACSignal.empty()
     }
 }
 
@@ -84,18 +77,10 @@ class MainCentaur: Centaur {
     }
 }
 
-class MainEden: Eden {
-    class var typewriterAudio: AVAudioPlayer {
-        let path = NSBundle.mainBundle().pathForResource("typewriter", ofType: "mp3")!
-        return try? AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
-    }
-}
-
 class MainUnicorn: Unicorn {
     let textView = UITextView()
     let centaur = MainCentaur()
     let buttons = UIView()
-    var player: AVAudioPlayer!
 
     override func loadView() {
         self.view = UIView(frame: CGRectMake(0, 0, 100, 100))
@@ -114,8 +99,6 @@ class MainUnicorn: Unicorn {
         buttons.frame = CGRectMake(0, 100, 100, 100);
         buttons.hidden = true
         view.addSubview(buttons)
-
-        player = MainEden.typewriterAudio
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -130,7 +113,7 @@ class MainUnicorn: Unicorn {
     }
 
     func provoke(scene: Scene) -> RACSignal {
-        self.player.play()
+        typewriterAudio.play()
         return scene.textHeartbeat.doNext ({
             [unowned self] (x) -> Void in
             let s = x as! String
@@ -144,7 +127,7 @@ class MainUnicorn: Unicorn {
                 self.buttons.addSubview(self.button(i, t: choice))
             }
             self.buttons.hidden = false
-            self.player.fade(-0.12)
+            typewriterAudio.fade(-0.12)
         }).replayLast()
     }
 

@@ -1,1 +1,0 @@
-../../../CLKSingletons/Pod/Classes/CLKSingleton.h

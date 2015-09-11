@@ -1,0 +1,6 @@
+framework module NSString_Ruby {
+  umbrella header "NSString+Ruby-umbrella.h"
+
+  export *
+  module * { export * }
+}
