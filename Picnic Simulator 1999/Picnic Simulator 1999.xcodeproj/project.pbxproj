@@ -14,6 +14,7 @@
 		3F9C254D1B292E290025F0D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254C1B292E290025F0D4 /* Images.xcassets */; };
 		3F9C25501B292E290025F0D4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9C254E1B292E290025F0D4 /* LaunchScreen.xib */; };
 		3F9C255C1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */; };
+		3FFB5E5B1BA345A5005D0417 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFB5E5A1BA345A5005D0417 /* Scene.swift */; settings = {ASSET_TAGS = (); }; };
 		CF9D9111B19E806C3AEF0703 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB84B758A6931D835B5A4BD /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,7 @@
 		3F9C25551B292E290025F0D4 /* Picnic Simulator 1999Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Picnic Simulator 1999Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9C255A1B292E290025F0D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9C255B1B292E290025F0D4 /* Picnic_Simulator_1999Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picnic_Simulator_1999Tests.swift; sourceTree = "<group>"; };
+		3FFB5E5A1BA345A5005D0417 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
 		5AB84B758A6931D835B5A4BD /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B41563BCC9389C80122F855D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				3F9C25441B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld */,
 				3F9C25401B292E290025F0D4 /* Supporting Files */,
 				3F06F9ED1B293153000FA049 /* Prelude.pch */,
+				3FFB5E5A1BA345A5005D0417 /* Scene.swift */,
 			);
 			path = "Picnic Simulator 1999";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FFB5E5B1BA345A5005D0417 /* Scene.swift in Sources */,
 				3F9C25481B292E290025F0D4 /* MainUnicorn.swift in Sources */,
 				3F9C25461B292E290025F0D4 /* Picnic_Simulator_1999.xcdatamodeld in Sources */,
 				3F9C25431B292E290025F0D4 /* AppDelegate.swift in Sources */,

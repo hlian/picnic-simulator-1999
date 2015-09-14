@@ -17,7 +17,6 @@
 @import PureLayout;
 @import CLKSingletons;
 @import NSURL_QueryDictionary;
-@import NSString_Ruby;
 @import UIColor_Utilities;
 @import UIView_Positioning;
 

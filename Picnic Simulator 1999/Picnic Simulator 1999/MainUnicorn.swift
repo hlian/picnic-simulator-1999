@@ -15,10 +15,6 @@ class Unicorn: UIViewController {
 class Centaur: NSObject {
 }
 
-class Eden: NSObject {
-
-}
-
 private var typewriterAudio: AVAudioPlayer = {
     let path = NSBundle.mainBundle().pathForResource("typewriter", ofType: "mp3")!
     let player = try! AVAudioPlayer(contentsOfURL: NSURL(fileURLWithPath: path))
@@ -46,19 +42,6 @@ extension AVAudioPlayer {
             self.volume = min(1, max(0, self.volume))
             self.stop()
         }
-    }
-}
-
-class Scene: Centaur {
-    let text: String = ""
-    let choices: [String] = [""]
-
-    init(text: String) {
-        let parts = text.sp
-    }
-
-    var textHeartbeat: RACSignal {
-        return RACSignal.empty()
     }
 }
 
